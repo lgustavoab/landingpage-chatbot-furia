@@ -765,3 +765,23 @@ body {
     font-size: 1em;
   }
 }
+/* Torna tabelas responsivas com scroll horizontal se necessário */
+.lineup table,
+.titles table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;          /* permite overflow */
+  overflow-x: auto;        /* habilita scroll horizontal */
+  white-space: nowrap;     /* evita quebra de células */
+}
+
+/* Opcional: esconde as bordas laterais ao rolar */
+.lineup table::-webkit-scrollbar,
+.titles table::-webkit-scrollbar {
+  height: 6px;
+}
+.lineup table::-webkit-scrollbar-thumb,
+.titles table::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+}
