@@ -2,7 +2,7 @@
 
 import os
 import gradio as gr
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from gradio.routes import mount_gradio_app
@@ -49,9 +49,9 @@ with gr.Blocks(title="Chatbot de Precisão", theme=gr.themes.Soft()) as chatbot_
 # 2) Monta o Gradio como sub-app em /chatbot
 mount_gradio_app(app, chatbot_app, path="/chatbot")
 
-# 3) Serve a landing page em /
-@app.get("/")
-async def serve_index():
+# 3) Serve a landing page em / para GET e HEAD
+@app.api_route("/", methods=["GET", "HEAD"])
+async def serve_index(request: Request):
     return FileResponse("index.html")
 
 # 4) Serve arquivos estáticos em /static
