@@ -785,3 +785,15 @@ body {
   background: rgba(255,255,255,0.2);
   border-radius: 3px;
 }
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive .lineup-table {
+  width: 100%;
+  min-width: 600px; /* ajuste conforme suas colunas */
+  border-collapse: collapse;
+}
