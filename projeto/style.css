@@ -689,3 +689,79 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+/* ----------------------------------------------------------------------
+   RESPONSIVIDADE PARA TELAS PEQUENAS
+---------------------------------------------------------------------- */
+
+/* Até 768px (tablets e celulares grandes) */
+@media (max-width: 768px) {
+  /* Exemplo: empilhar header */
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .partners {
+    display: none; /* esconde logos no topo */
+  }
+  .site-title {
+    font-size: 2em;
+  }
+  /* Ajuste tamanho do iframe do chatbot */
+  .iframe-chat {
+    height: 400px;
+  }
+}
+
+/* Até 600px (celulares comuns) */
+@media (max-width: 600px) {
+  /* Sidebar vira menu hamburguer (você já esconde a sidebar em <900px) */
+  .sidebar {
+    display: none;
+  }
+  /* Carrossel menor */
+  .carousel-img {
+    max-height: 200px;
+  }
+  /* Botão de chat menor */
+  #toggle-chatbot {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 18px;
+  }
+  /* Empilha lineup em blocos */
+  .lineup table,
+  .lineup th,
+  .lineup td {
+    display: block;
+    width: 100%;
+  }
+  .lineup td {
+    padding-bottom: 8px;
+  }
+  /* Reduz margem das seções */
+  .sobre,
+  .history,
+  .titles,
+  .store,
+  .videos {
+    padding: 0 10px;
+  }
+}
+
+/* Até 480px (phones menores) */
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.5em;
+  }
+  .carousel-overlay {
+    max-width: 90%;
+    bottom: 5px;
+    left: 5px;
+    padding: 8px;
+  }
+  .product-info h3 {
+    font-size: 1em;
+  }
+}
