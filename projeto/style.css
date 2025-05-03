@@ -411,24 +411,24 @@ footer {
   .lineup table,
   .lineup th,
   .lineup td {
-    display: block;
+   display: block;
     width: 100%;
     box-sizing: border-box;
   }
 
-  .lineup th {
+ .lineup th {
     text-align: left;
     background-color: #1f1f1f;
-    padding-top: 12px;
-  }
+   padding-top: 12px;
+ }
 
   .lineup td {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    padding-bottom: 12px;
+   border-top: none;
+   border-left: none;
+       border-right: none;
+   padding-bottom: 12px;
   }
-
+  
   .iframe-chat {
     height: 450px;
   }
@@ -442,6 +442,7 @@ footer {
     max-height: 300px;
   }
 }
+
 
 /* === HISTÓRIA === */
 .history {
@@ -730,16 +731,6 @@ body {
     padding: 10px;
     font-size: 18px;
   }
-  /* Empilha lineup em blocos */
-  .lineup table,
-  .lineup th,
-  .lineup td {
-    display: block;
-    width: 100%;
-  }
-  .lineup td {
-    padding-bottom: 8px;
-  }
   /* Reduz margem das seções */
   .sobre,
   .history,
@@ -786,14 +777,25 @@ body {
   border-radius: 3px;
 }
 
+/* style.css */
+
 .table-responsive {
-  width: 100%;
+  display: inline-block; /* ← muda de block para inline-block */
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  text-align: left;      /* ← mantém o texto das células à esquerda */
 }
 
 .table-responsive .lineup-table {
-  width: 100%;
-  min-width: 600px; /* ajuste conforme suas colunas */
+  width: auto;           /* ← para ajustar à largura do conteúdo */
+  min-width: 600px;      /* ou o valor que você preferir */
+  margin: 0 auto;        /* ← centraliza a tabela dentro do inline-block */
   border-collapse: collapse;
 }
+
+.table-responsive .lineup-table th,
+.table-responsive .lineup-table td {
+  padding: 0.75rem;
+  text-align: left;
+}
+
