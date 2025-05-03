@@ -1,0 +1,9 @@
+gradio
+openai
+python-dotenv
+requests
+beautifulsoup4
+python-dateutil
+unidecode
+fastapi
+uvicorn

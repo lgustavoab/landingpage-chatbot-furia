@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FURIA CS:GO - Chatbot</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div id="top"></div>
+
+<!-- === SIDEBAR FIXA À ESQUERDA === -->
+<aside class="sidebar">
+  <nav>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#lineup">Lineup</a></li>
+      <li><a href="#history">Nossa História</a></li>
+      <li><a href="#titles">Títulos</a></li>
+      <li><a href="#store">Loja Oficial</a></li>
+      <li><a href="#videos">Vídeos</a></li>
+      <li><a href="#links-uteis">Links Úteis</a></li>
+    </ul>
+  </nav>
+</aside>
+
+  <header>
+    <div class="header-container">
+      <!-- Agrupamento de logo + título -->
+      <div class="branding">
+        <a href="#top">
+          <img src="/static/furia-logo.png" alt="Logo FURIA" class="logo">
+        </a>
+        <h1 class="site-title">FURIA – COUNTER STRIKE</h1>
+      </div>
+      <!-- Parceiros à direita -->
+      <div class="partners">
+        <a href="https://www.adidas.com.br/" target="_blank">
+          <img src="/static/logos/adidas.png" alt="Adidas">
+        </a>
+        <a href="https://www.hellmanns.com.br/" target="_blank">
+          <img src="static/logos/hellmanns.png" alt="Hellmann's">
+        </a>
+        <a href="https://www.redbull.com/br-pt/" target="_blank">
+          <img src="static/logos/redbull.png" alt="Red Bull">
+        </a>
+        <a href="https://www.pokerstars.com/" target="_blank">
+          <img src="static/logos/pokerstars.png" alt="PokerStars">
+        </a>
+        <a href="https://www.cruzeirodosulvirtual.com.br/" target="_blank">
+          <img src="static/logos/cruzeiro.png" alt="Cruzeiro do Sul Virtual">
+        </a>
+        <a href="https://www.fallenstore.com.br/" target="_blank">
+          <img src="static/logos/fallengear.png" alt="Fallen Gear">
+        </a>
+        <a href="https://www.lenovo.com/br/pt/legion/" target="_blank">
+          <img src="static/logos/lenovo.png" alt="Lenovo Legion">
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <!-- Carrossel de imagens -->
+  <section class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="static/carrosel/img1.jpg" class="carousel-img" alt="1">
+        <img src="static/carrosel/img2.jpg" class="carousel-img" alt="2">
+        <img src="static/carrosel/img3.jpg" class="carousel-img" alt="3">
+        <img src="static/carrosel/img4.jpg" class="carousel-img" alt="4">
+        <img src="static/carrosel/img5.jpg" class="carousel-img" alt="5">
+      </div>
+      <!-- Caixa de texto sobre o carrossel -->
+      <div class="carousel-overlay" style="position:absolute; bottom:20px; left:20px; background:rgba(0,0,0,0.6); padding:12px 16px; border-radius:8px; color:#fff; max-width: 70%;">
+        <p style="margin:0 0 8px;">Seja Furioso e venha torcer com a gente!</p>
+        <a href="https://www.furia.gg/?gad_source=1&gclid=Cj0KCQjwlMfABhCWARIsADGXdy9BpoYk9Q8k2zYJd-b8pq27ECD-ydZCRAQaZuQMvrZfP5MxrUltPN0aAulxEALw_wcB" target="_blank" style="display:inline-block; padding:6px 12px; background:#fcd535; color:#0f0f0f; text-decoration:none; border-radius:4px; font-weight:bold;">Visite o site oficial</a>
+      </div>
+      <button class="carousel-btn prev" onclick="voltarSlide()">❮</button>
+      <button class="carousel-btn next" onclick="avancarSlide()">❯</button>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre">
+    <h2>Sobre a Organização</h2>
+    <p class="justificado">
+      FURIA Esports (FURIA) é uma organização brasileira de esports, fundada em agosto de 2017 em Uberlândia, Minas Gerais, idealizada pelo empresário Jaime Pádua em parceria com André Akkari e Cris Guedes, com o objetivo de projetar o Brasil no cenário competitivo mundial.
+    </p>
+    <h3>Nossas Modalidades</h3>
+    <ul class="lista-jogos">
+      <li>Counter-Strike 2</li>
+      <li>Rocket League</li>
+      <li>League of Legends</li>
+      <li>Valorant</li>
+      <li>Rainbow Six: Siege</li>
+      <li>Apex Legends</li>
+      <li>Futebol 7 (Kings League)</li>
+    </ul>
+    <p class="justificado">
+      Nossa paixão desde o início foi o Counter-Strike. Com investimentos iniciais focados em CS:GO, a FURIA rapidamente se tornou referência na América Latina. Dois anos após a fundação, estreamos em um Major no IEM Katowice 2019 e, desde então, acumulamos resultados expressivos: quartas de final no PGL Major Stockholm 2021 e semifinal no IEM Rio Major 2022. Hoje, competimos em alto nível no Counter-Strike 2, defendendo as cores brasileiras com um roster de estrelas como FalleN, yuurih, KSCERATO, YEKINDAR e molodoy.
+    </p>
+    <p class="justificado">
+      Comprometida com a excelência, a FURIA investe em infraestrutura de ponta: desde 2020, nossa base em São Paulo abriga equipes e staff em um ambiente moderno, e em 2023 inauguramos uma nova sede em Mellieħa, Malta, para facilitar a participação em torneios na Europa.
+    </p>
+    <p class="justificado">
+      Mais do que conquistar títulos, queremos inspirar a comunidade gamer, gerar conteúdo de qualidade e fomentar o crescimento dos esports no Brasil e no mundo, sempre com dedicação, profissionalismo e a energia única que define a FURIA.
+    </p>
+  </section>
+
+  <section id="lineup" class="lineup">
+    <h2>🎮 Elenco Atual de Counter Strike</h2>
+    <table>
+      <tr><th>Jogador</th><th>Função</th></tr>
+      <tr><td>Gabriel "FalleN" Lima</td><td>Rifler/IGL (In-Game Leader)</td></tr>
+      <tr><td>Victor "Kscerato" Costa</td><td>Rifler (Star Player/Lurker)</td></tr>
+      <tr><td>Mareks "YEKINDAR" Gaļinskis</td><td>Rifler (Entry Fragger/Playmaker)</td></tr>
+      <tr><td>Yuri Gomes "Yuurih" dos Santos Boian</td><td>Rifler</td></tr>
+      <tr><td>Danil "molodoy" Golubenko</td><td>AWPer</td></tr>
+      <tr><td>Felipe "skullz" Medeiros</td><td>Reserva</td></tr>
+      <tr><td>Marcelo "chelo" Cespedes</td><td>Reserva</td></tr>
+      <tr><td>Sidnei "sidde" Macedo</td><td>Coach</td></tr>
+      <tr><td>Danil "Juan "Hepa" Borges</td><td>Assistent Coach</td></tr>
+    </table>
+  </section>
+
+<!-- Seção História -->
+<section id="history" class="history">
+    <h2>📜 Nossa História</h2>
+    <p>
+      Fundada em agosto de 2017 em Uberlândia, Minas Gerais, a FURIA foi fruto da idealização do empresário Jaime Pádua, que já planejava investir nos esportes eletrônicos, e dos também empresários André Akkari (jogador de pôquer profissional) e Cris Guedes. Esses dois tinham planos semelhantes e atribuíram a Jaime a missão de conduzir o projeto. No decorrer dos anos, a FURIA foi evoluindo no cenário mundial dos esportes eletrônicos, alcançando marcas históricas entre equipes brasileiras.
+    </p>
+    <p>
+      A organização já possuía escritórios menores em São Paulo e nos Estados Unidos, mas foi em novembro de 2020 que foi anunciado uma estrutura maior na capital paulista, com o objetivo de comportar seus funcionários e times profissionais. Em 2023, anunciou uma nova sede em Mellieħa, Malta, para disputar com mais facilidade torneios que acontecem na Europa.
+    </p>
+    <p>
+      Em 2024, a organização estreou na modalidade de futebol 7, fazendo sua primeira aparição na competição Kings World Cup da Kings League, liga de futebol 7 criada pelo ex-futebolista Gerard Piqué e pelo influenciador digital Ibai Llanos.
+    </p>
+    <p>
+      Em 2025, a organização anuncia oficialmente seu time de futebol 7, com a presidência de Cris Guedes e Neymar, e também a entrada na Porsche Cup Brasil, em parceria com a equipe RedRam, tendo Caio Castro e Matheus Comparatto como pilotos.
+    </p>
+  </section>
+
+  <!-- Nova seção de títulos -->
+  <section id="titles" class="titles">
+    <h2>🏆 Principais Títulos de Counter-Strike</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Posição</th>
+          <th>Tier</th>
+          <th>Local</th>
+          <th>Jogo</th>
+          <th>Torneio</th>
+          <th>Etapa</th>
+          <th>Resultado</th>
+          <th>Oponente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2023</td>
+          <td>1st</td>
+          <td>A-Tier</td>
+          <td>Offline</td>
+          <td>Counter-Strike 2</td>
+          <td>Elisa Masters Espoo 2023</td>
+          <td>Elisa Masters Espoo 2023</td>
+          <td>3 : 1</td>
+          <td>Apeks</td>
+        </tr>
+        <tr>
+          <td>2021</td>
+          <td>1st</td>
+          <td>A-Tier</td>
+          <td>Online</td>
+          <td>Global Offensive</td>
+          <td>Elisa Invitational Summer 2021</td>
+          <td>Elisa Invitational Summer 2021</td>
+          <td>2 : 1</td>
+          <td>SKADE</td>
+        </tr>
+        <tr>
+          <td>2020</td>
+          <td>1st</td>
+          <td>S-Tier</td>
+          <td>Online</td>
+          <td>Global Offensive</td>
+          <td>ESL Pro League</td>
+          <td>ESL Pro League Season 12: North America</td>
+          <td>3 : 0</td>
+          <td>100 Thieves</td>
+        </tr>
+        <tr>
+          <td>2020</td>
+          <td>1st</td>
+          <td>A-Tier</td>
+          <td>Online</td>
+          <td>Global Offensive</td>
+          <td>DreamHack Masters</td>
+          <td>DreamHack Masters Spring 2020: North America</td>
+          <td>3 : 0</td>
+          <td>Team Liquid</td>
+        </tr>
+        <tr>
+          <td>2019</td>
+          <td>1st</td>
+          <td>A-Tier</td>
+          <td>Offline</td>
+          <td>Global Offensive</td>
+          <td>Arctic Invitational 2019</td>
+          <td>Arctic Invitational 2019</td>
+          <td>2 : 0</td>
+          <td>CR4ZY</td>
+        </tr>
+        <tr>
+          <td>2019</td>
+          <td>1st</td>
+          <td>B-Tier</td>
+          <td>Offline</td>
+          <td>Global Offensive</td>
+          <td>EMF CS:GO World Invitational 2019</td>
+          <td>EMF CS:GO World Invitational 2019</td>
+          <td>3 : 1</td>
+          <td>AVANGAR</td>
+        </tr>
+        <tr>
+          <td>2019</td>
+          <td>1st</td>
+          <td>A-Tier</td>
+          <td>Offline</td>
+          <td>Global Offensive</td>
+          <td>ESEA</td>
+          <td>ESEA Season 31: Global Challenge</td>
+          <td>2 : 0</td>
+          <td>Team Spirit</td>
+        </tr>
+        <tr>
+          <td>2019</td>
+          <td>2nd</td>
+          <td>S-Tier</td>
+          <td>Offline</td>
+          <td>Global Offensive</td>
+          <td>Esports Championship Series</td>
+          <td>Esports Championship Series Season 7 – Finals</td>
+          <td>0 : 2</td>
+          <td>Team Vitality</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+<!-- Seção Loja -->
+<section id="store" class="store">
+  <h2>🛒 Loja Oficial</h2>
+  <p class="store-intro">
+    Encontre aqui os itens oficiais da FURIA: camisetas, bonés, moletons e muito mais! Garanta já seu produto favorito e vista as cores da equipe que faz história no CS:GO. Frete rápido e exclusivo para torcedores Furiosos!
+  </p>
+  <div class="store-grid" id="store-grid">
+</section>
+
+<!-- Seção Vídeos -->
+<section id="videos" class="videos">
+  <h2>🎥 Gameplays mais rescentes</h2>
+  <div class="videos-grid">
+    <!-- Primeiro vídeo YouTube -->
+    <iframe
+      class="video-embed"
+      src="https://www.youtube.com/embed/msjYLgkApHk?si=IgffDxvI91T0Ylzl"
+      title="Vídeo 1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+    <!-- Segundo vídeo YouTube -->
+    <iframe
+      class="video-embed"
+      src="https://www.youtube.com/embed/I8fBkZ0xcKc?si=DDnrl83UjYFHJTKV"
+      title="Vídeo 2"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+    <!-- Terceiro vídeo YouTube -->
+    <iframe
+      class="video-embed"
+      src="https://www.youtube.com/embed/obntH_ZBUfE?si=9A6TZTCjPvDc21k5"
+      title="Vídeo 3"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+    <!-- Quarto vídeo YouTube -->
+    <iframe
+      class="video-embed"
+      src="https://www.youtube.com/embed/z5Ai_TtqTNQ?si=XHIp3dXbj2jzTCtE"
+      title="Vídeo 4"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+
+        <!-- Quinto vídeo YouTube -->
+        <iframe
+        class="video-embed"
+        src="https://www.youtube.com/embed/uF44u9_X0O0?si=Zl6E_M8XaOy_8R78"
+        title="Vídeo 5"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+        <!-- Sexto vídeo YouTube -->
+        <iframe
+        class="video-embed"
+        src="https://www.youtube.com/embed/U4LgBKGjawo?si=X0VsydT3EWwBdZC3"
+        title="Vídeo 6"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+  </div>
+</section>
+
+<section id="links-uteis" class="links-uteis">
+    <h2>🌐 Links Úteis</h2>
+    <div class="botoes-links">
+      <a href="https://furia.gg/" target="_blank">🌐 Site Oficial da FURIA</a>
+      <a href="https://draft5.gg/equipe/330-FURIA" target="_blank">📊 Draft5</a>
+      <a href="https://instagram.com/furiagg" target="_blank">📸 Instagram</a>
+      <a href="https://twitter.com/furia" target="_blank">
+        <img src="static/x-logo.png" alt="Logo X" style="width: 18px; vertical-align: middle; margin-right: 8px;">
+        Perfil no X
+      </a>
+    </div>
+  </section>
+
+  <section class="chatbot-wrapper">
+    <button id="toggle-chatbot">💬 Abrir Chat</button>
+    <div class="chatbot" id="chatbot" style="display: none;">
+      <h3>🤖 Chatbot Furioso</h3>
+      <iframe
+        src="/chatbot"
+        width="100%"
+        height="500"
+        frameborder="0"
+        class="iframe-chat">
+      </iframe>
+    </div>
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2025 FURIA Esports | Projeto de Landingpage com Chat Bot</p>
+  </footer>
+
+  <!-- Lightbox de imagens de produto -->
+  <div id="image-modal" class="image-modal">
+    <button id="image-modal-close" class="image-modal-close" aria-label="Fechar imagem">✕</button>
+    <img id="image-modal-img" src="" alt="Imagem ampliada">
+  </div>
+
+  <!-- Script único que contém todo o comportamento -->
+  <script src="static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,691 @@
+/* style.css - Estilo da landing page FURIA */
+
+/* Ajuste de espaçamento para header fixo */
+:root {
+  --header-height: 110px;
+  --sidebar-width: 220px;   /* ajuste para o valor exato que você usa no body */
+}
+
+body {
+  margin: 0;
+  padding-top: var(--header-height);
+  font-family: Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+
+/* === HEADER === */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 1000;
+  background-color: #111111;
+  transition: transform 0.3s ease-in-out;
+}
+
+header.hidden {
+  transform: translateY(-100%);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 3em;
+  color: #fcd535;
+  line-height: 1;
+}
+
+.partners {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.partners img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.partners a:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  body {
+    padding-top: var(--header-height);
+  }
+
+  .partners {
+    display: none;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .branding {
+    justify-content: center;
+  }
+
+  .logo {
+    width: 50px;
+  }
+}
+
+/* === CARROSSEL AVANÇADO === */
+.carousel-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-img {
+  width: 100%;
+  flex-shrink: 0;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.carousel-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  max-width: 70%;
+}
+
+.carousel-overlay p {
+  margin: 0 0 8px;
+}
+
+.carousel-overlay a {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #fcd535;
+  color: #0f0f0f;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* === SOBRE === */
+.sobre {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 1.8em;
+  color: #fcd535;
+}
+
+.justificado {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.lista-jogos {
+  list-style-type: disc;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  padding-left: 20px;
+}
+
+.lista-jogos li {
+  margin-bottom: 6px;
+}
+
+/* === LINEUP === */
+.lineup {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.lineup h2 {
+  font-size: 1.8em;
+  color: #fcd535;
+  margin-bottom: 20px;
+}
+
+.lineup table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.lineup th,
+.lineup td {
+  border: 1px solid #333;
+  padding: 12px;
+  font-size: 1em;
+}
+
+.lineup th {
+  background-color: #1f1f1f;
+  color: #fcd535;
+}
+
+.lineup td {
+  background-color: #222;
+  color: #ffffff;
+}
+
+/* === TÍTULOS DE CS === */
+.titles {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.titles h2 {
+  font-size: 1.8em;
+  color: #fcd535;
+  margin-bottom: 20px;
+}
+
+.titles table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.titles th,
+.titles td {
+  border: 1px solid #333;
+  padding: 12px;
+  font-size: 1em;
+}
+
+.titles th {
+  background-color: #1f1f1f;
+  color: #fcd535;
+}
+
+.titles td {
+  background-color: #222;
+  color: #ffffff;
+}
+
+/* === LINKS === */
+.links-uteis {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1a1a1a;
+  width: 100%;
+  margin-left: 0;
+}
+
+.links-uteis h2 {
+  font-size: 1.6em;
+  color: #fcd535;
+  margin-bottom: 20px;
+}
+
+/* botão para voltar ao topo, caso queira adicionar */
+.links-uteis .voltar-topo {
+  display: inline-block;
+  margin-top: 20px;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #888888;
+  background-color: #111111;
+  width: 100%;
+  margin-left: 0;
+}
+
+/* estilos de links dentro de LINKS-UTEIS */
+.botoes-links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #fcd535;
+  color: #0f0f0f;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.botoes-links a:hover {
+  background-color: #e6b800;
+}
+
+.botoes-links img {
+  vertical-align: middle;
+  margin-right: 8px;
+  height: 18px;
+}
+
+/* === CHATBOT === */
+.chatbot-wrapper {
+  position: relative;
+}
+
+#chatbot {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 500px;
+  max-width: 90vw;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.chatbot h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.chatbot p {
+  color: #bbbbbb;
+  margin-bottom: 20px;
+}
+
+.iframe-chat {
+  border: 2px solid #222;
+  border-radius: 8px;
+  width: 100%;
+  height: 600px;
+}
+
+#toggle-chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fcd535;
+  color: #0f0f0f;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
+}
+
+#toggle-chatbot:hover {
+  background-color: #e6b800;
+}
+
+/* === MOBILE === */
+@media (max-width: 600px) {
+  h1,
+  .site-title {
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  .lineup table,
+  .lineup th,
+  .lineup td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .lineup th {
+    text-align: left;
+    background-color: #1f1f1f;
+    padding-top: 12px;
+  }
+
+  .lineup td {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 12px;
+  }
+
+  .iframe-chat {
+    height: 450px;
+  }
+
+  .carousel-btn {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .carousel-img {
+    max-height: 300px;
+  }
+}
+
+/* === HISTÓRIA === */
+.history {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.history h2 {
+  font-size: 1.8em;
+  color: #fcd535;
+  margin-bottom: 20px;
+}
+
+.history p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* === LOJA OFICIAL === */
+.store {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.store h2 {
+  font-size: 1.8em;
+  color: #fcd535;
+  margin-bottom: 20px;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background-color: #222;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.product-image-thumb:hover,
+.product-image-thumb:hover img {
+  cursor: pointer;
+}
+
+.product-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 180px;
+}
+
+.product-info {
+  padding: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info h3 {
+  margin: 0 0 8px;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.product-info p {
+  margin: 0 0 12px;
+  font-size: 0.95em;
+  color: #bbb;
+  flex: 1;
+}
+
+.product-info a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #fcd535;
+  color: #0f0f0f;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* === VÍDEOS === */
+.videos {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.videos h2 {
+  font-size: 1.8em;
+  color: #fcd535;
+  margin-bottom: 20px;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.video-local,
+.video-embed {
+  width: 100%;
+  border-radius: 8px;
+  background: #000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.video-local {
+  height: auto; /* o próprio browser controla */
+}
+
+.video-embed {
+  aspect-ratio: 16 / 9; /* garante proporção 16:9 */
+}
+
+/* suaviza a rolagem ao clicar nos links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+/* Garante que, ao pular para #id, o topo da seção fique abaixo do header */
+section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
+/* sidebar fixa à esquerda */
+.sidebar {
+  position: fixed;                 /* mantém fixo na tela */
+  top: var(--header-height);
+  left: 0;
+  width: auto;                     /* não força uma largura */
+  background: transparent;         /* sem bloco colorido atrás */
+  padding: 0.5rem 1rem;            /* espaçamento só interno */
+  box-shadow: none;                /* sem sombra lateral */
+  z-index: 1000;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar nav a {
+  display: block;                  /* cada link em linha própria */
+  padding: 0.5rem 0;               /* deixa área clicável maior */
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;                 /* ajuste aqui o tamanho */
+  transition: color 0.2s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  color: #fcd535;                  /* só muda cor do texto */
+}
+
+/* em telas pequenas, esconda ou transforme em botão */
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+  body {
+    padding-left: 0;
+  }
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+.store-intro {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+  text-align: center;
+}
+
+/* Lightbox de imagem */
+.image-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: none;               /* escondido por padrão */
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.image-modal.show {
+  display: flex;               /* mostra quando tiver .show */
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+/* botão ✕ */
+.image-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 2100;
+}
+.image-modal-close:hover {
+  background: rgba(0,0,0,0.8);
+} 
+
+#sobre {
+  position: relative;
+  overflow: hidden;
+}
