@@ -2,6 +2,14 @@ FURIA CS:GO Landing Page com Chatbot
 
 Este repositório contém uma landing page estática da FURIA Esports com um chatbot integrado desenvolvido em Python, usando FastAPI e Gradio para comunicação com a API OpenAI.
 
+Links de imagens de pré-vizualisação do site:
+
+1 - https://ibb.co/LDHwNDm5
+
+2 - https://ibb.co/tnwKYbV
+
+3 - https://ibb.co/GfytRYbH
+
 Features
 
 Landing Page Responsiva: HTML5, CSS3 e JavaScript puro para carrossel de imagens, navegação e lightbox.
